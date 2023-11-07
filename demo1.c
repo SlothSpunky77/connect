@@ -124,15 +124,15 @@ char fun(int currentplayer)
 
 int main() {
     int ROWS,COLUMNS,players;
-    printf("enter number of rows greater than 6\n");
+    printf("enter number of rows greater than 6: ");
     scanf("%d",&ROWS);
-    printf("enter number ofcolumns greater than 6\n");
+    printf("enter number of columns greater than 6: ");
     scanf("%d",&COLUMNS);
-    printf("enter number of players less than 5\n");
+    printf("enter number of players less than 5: ");
     scanf("%d",&players);
     while(players>5)
     {
-    printf("enter number of players less than 5\n");
+    printf("enter number of players less than 5: ");
     scanf("%d",&players);
     }
 
