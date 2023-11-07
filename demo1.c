@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 void initializeBoard(int ROWS,int COLUMNS,char (*board)[COLUMNS]) {
     for (int row = 0; row < ROWS; row++) {
         for (int col = 0; col < COLUMNS; col++) {
@@ -170,9 +169,8 @@ int main() {
                 break;
             }
             currentPlayer = (currentPlayer == 1) ? 2 : 1;
-        } else {
+        } else
             printf("Column is full. Try again.\n");
-        }
     }
     }
     if(players==3)
@@ -216,9 +214,8 @@ int main() {
                 break;
             }
         } 
-        else {
+        else
             printf("Column is full. Try again.\n");
-        }
     }
     }
     if(players==4)
@@ -265,9 +262,8 @@ int main() {
                 break;
             }
         } 
-        else {
+        else
             printf("Column is full. Try again.\n");
-        }
     }
     }
     if(players==5)
@@ -317,9 +313,8 @@ int main() {
                 break;
             }
         } 
-        else {
+        else
             printf("Column is full. Try again.\n");
-        }
     }
     }
     return 0;
