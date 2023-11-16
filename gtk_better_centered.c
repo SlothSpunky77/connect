@@ -332,7 +332,7 @@ void computeInput(GtkWidget *widget, gpointer data)
             gtk_dialog_run(GTK_DIALOG(dialog));
             gtk_widget_destroy(dialog);
             winCondition = 2;
-            return;
+            //return;
             // break;
         }
         moves++;
@@ -349,11 +349,11 @@ void computeInput(GtkWidget *widget, gpointer data)
             gtk_dialog_run(GTK_DIALOG(dialog));
             gtk_widget_destroy(dialog);
             winCondition = 2;
-            return;
+            //return;
             // break;
         }
         currentPlayer = fun1(currentPlayer, players);
-        winCondition = 0;
+        //winCondition = 0;
         recursion(currentPlayer);
     }
     else
@@ -367,7 +367,8 @@ void computeInput(GtkWidget *widget, gpointer data)
         gtk_dialog_run(GTK_DIALOG(dialog));
         gtk_widget_destroy(dialog);
         winCondition = 1;
-        return;
+        recursion(currentPlayer);
+        //return;
         // continue;
     }
 
@@ -400,15 +401,14 @@ void recursion(int CPlayer)
         g_signal_connect(buttonIP, "clicked", G_CALLBACK(computeInput), userEntry);
         gtk_widget_show_all(new_window);
     }
-    else if (winCondition == 1) // invalid case, player has to play again
-    {
-        recursion(CPlayer);
-    }
+    // else if (winCondition == 1) // invalid case, player has to play again
+    // {
+    //     recursion(CPlayer);
+    // }
     else // game has been won
     {
         clearGrid(GTK_GRID(gridBoard));
         printBoard(global_rows, global_cols, board, GTK_GRID(gridBoard));
-        exit(0);
     }
 }
 
